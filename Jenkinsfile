@@ -1,27 +1,21 @@
 pipeline {
-    aegnt any
-    stages {
-        stage("build") {
-            steps {
-                echo 'building the application...'
+    agent any
 
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building test branch.....'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing test branch.....'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying test branch......'
             }
         }
     }
-    stages {
-        stage("test") {
-            steps {
-                echo 'testing the application...'
-
-            }
-        }
-    }
-    stages {
-        stage("deploying the application") {
-            steps {
-
-            }
-        }
-    }
-
 }
